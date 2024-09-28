@@ -5,6 +5,7 @@ if [[ $arg = "?" ]]; then
     # echo "ftp"
     echo "ssh"
     # echo "mysql"
+    echo "passwd"
 fi    
 
 # ufw
@@ -42,3 +43,13 @@ fi
 #     ALTER USER 'root'@'localhost' IDENTIFIED BY 'new_strong_password';
 #     FLUSH PRIVILEGES;
 # fi
+
+# passwd
+if [[ $arg = "" ]] || [[ $arg = "passwd" ]]; then
+    echo vagrant
+    sudo passwd
+    echo artoo_detoo
+    sudo passwd artoo_detoo
+    echo boba_fett
+    sudo passwd boba_fett
+fi

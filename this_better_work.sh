@@ -14,7 +14,7 @@ if [[ $arg = "" ]] || [[ $arg = "ufw" ]]; then
     sudo ufw allow Apache
     sudo ufw allow 'Apache Full'
     sudo ufw allow 'Apache Secure'
-    sudo ufw allow CUPS
+    #sudo ufw allow CUPS
     sudo ufw allow OpenSSH
     sudo ufw allow Samba
     #sudo ufw allow [port]
@@ -32,6 +32,8 @@ fi
 if [[ $arg = "" ]] || [[ $arg = "ssh" ]]; then
     sudo mv /etc/ssh/sshd_config /etc/ssh/sshd_config.old
     sudo cp sshd_config /etc/ssh/
+    sudo service ssh restart
+    sudo service ssh status
 fi
 
 # mysql

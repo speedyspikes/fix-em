@@ -2,7 +2,7 @@
 arg=$1
 if [[ $arg = "?" ]]; then
     echo "ufw"
-    echo "ftp"
+    # echo "ftp"
     echo "ssh"
     # echo "mysql"
 fi    
@@ -23,10 +23,10 @@ if [[ $arg = "" ]] || [[ $arg = "ufw" ]]; then
 fi
 
 # ftp
-if [[ $arg = "" ]] || [[ $arg = "ftp" ]]; then
-    sudo service proftpd stop
-    sudo update-rc.d vsftpd disable
-fi
+# if [[ $arg = "" ]] || [[ $arg = "ftp" ]]; then
+#     sudo service proftpd stop
+#     sudo update-rc.d vsftpd disable
+# fi
 
 # ssh
 if [[ $arg = "" ]] || [[ $arg = "ssh" ]]; then

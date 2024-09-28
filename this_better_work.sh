@@ -42,6 +42,7 @@ fi
 if [[ $arg = "" ]] || [[ $arg = "ftp" ]]; then
      sudo service proftpd stop
      sudo apt install vsftpd
+     echo -e "vagrant\nartoo_detoo" | sudo tee /etc/vsftpd.userlist
      sudo update-rc.d proftpd disable
 fi
 
